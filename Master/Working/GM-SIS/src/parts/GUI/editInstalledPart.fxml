@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="352.0" prefWidth="462.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.GUI.EditInstalledPartController">
+   <children>
+      <Label layoutX="139.0" layoutY="14.0" text="Edit Installed Part">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="132.0" layoutY="48.0" prefWidth="200.0" />
+      <Label layoutX="24.0" layoutY="85.0" text="Part:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="partNameText" layoutX="263.0" layoutY="85.0" text="PartName">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="135.0" text="Install Date:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="installDatePicker" layoutX="263.0" layoutY="140.0" />
+      <Label layoutX="24.0" layoutY="188.0" text="Warranty Expiry Date:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="expiryDateText" layoutX="263.0" layoutY="188.0" text="Expiry Date">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="354.0" layoutY="291.0" mnemonicParsing="false" onAction="#updateInstalledPart" text="Update">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="testBtn" prefHeight="419.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diagrep.gui.ViewCustomerController">
+   <children>
+      <Label layoutX="187.0" layoutY="14.0" text="Customer Record" underline="true">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="70.0" text="First Name:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="110.0" text="Last Name:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="189.0" text="Address:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="269.0" text="Postcode:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="309.0" text="Phone:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="349.0" text="Email:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="firstName" layoutX="210.0" layoutY="74.0" prefHeight="22.0" prefWidth="351.0" text="Adam">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lastName" layoutX="210.0" layoutY="113.0" prefHeight="22.0" prefWidth="346.0" text="Laraqui" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="address" alignment="TOP_LEFT" layoutX="210.0" layoutY="193.0" prefHeight="66.0" prefWidth="346.0" text="Muppet Headquarters&#10;Sesame Street" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="postCode" layoutX="210.0" layoutY="271.0" prefHeight="22.0" prefWidth="346.0" text="N23435" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="phone" layoutX="210.0" layoutY="312.0" prefHeight="22.0" prefWidth="346.0" text="079" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="email" layoutX="210.0" layoutY="352.0" prefHeight="22.0" prefWidth="346.0" text="mustafa@gmail.com" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="type" layoutX="210.0" layoutY="152.0" prefHeight="22.0" prefWidth="346.0" text="Business" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="149.0" text="Type:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

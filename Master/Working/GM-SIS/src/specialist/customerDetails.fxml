@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="335.0" prefWidth="367.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="specialist.CustomerDetailsController">
+   <children>
+      <Label layoutX="106.0" layoutY="7.0" text="Customer Details">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="51.0" text="Firstname">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="99.0" text="Surname">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="11.0" layoutY="147.0" text="Address">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="194.0" text="Postcode">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="240.0" text="Phone">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="290.0" text="Email">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fName" layoutX="140.0" layoutY="52.0" prefHeight="25.0" prefWidth="218.0" />
+      <TextField fx:id="sName" layoutX="140.0" layoutY="100.0" prefHeight="25.0" prefWidth="218.0" />
+      <TextField fx:id="address" layoutX="140.0" layoutY="148.0" prefHeight="25.0" prefWidth="218.0" />
+      <TextField fx:id="postCode" layoutX="140.0" layoutY="195.0" prefHeight="25.0" prefWidth="218.0" />
+      <TextField fx:id="phone" layoutX="140.0" layoutY="241.0" prefHeight="25.0" prefWidth="218.0" />
+      <TextField fx:id="email" layoutX="140.0" layoutY="291.0" prefHeight="25.0" prefWidth="218.0" />
+   </children>
+</AnchorPane>

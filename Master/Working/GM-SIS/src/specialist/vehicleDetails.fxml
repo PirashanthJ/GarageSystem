@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="401.0" prefWidth="367.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="specialist.VehicleDetailsController">
+   <children>
+      <Label layoutX="106.0" layoutY="7.0" text="Vehicle Details">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="51.0" text="Registration">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="99.0" text="Make">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="11.0" layoutY="147.0" text="Model">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="194.0" text="EngineSize">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="240.0" text="FuelType">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="290.0" text="Colour">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="338.0" text="CurrentMileage">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="registration" layoutX="140.0" layoutY="52.0" prefHeight="25.0" prefWidth="218.0" />
+      <TextField fx:id="make" layoutX="140.0" layoutY="100.0" prefHeight="25.0" prefWidth="218.0" />
+      <TextField fx:id="model" layoutX="140.0" layoutY="148.0" prefHeight="25.0" prefWidth="218.0" />
+      <TextField fx:id="engineSize" layoutX="140.0" layoutY="195.0" prefHeight="25.0" prefWidth="218.0" />
+      <TextField fx:id="fuelType" layoutX="140.0" layoutY="241.0" prefHeight="25.0" prefWidth="218.0" />
+      <TextField fx:id="colour" layoutX="140.0" layoutY="291.0" prefHeight="25.0" prefWidth="218.0" />
+      <TextField fx:id="mileage" layoutX="140.0" layoutY="339.0" prefHeight="25.0" prefWidth="218.0" />
+   </children>
+</AnchorPane>

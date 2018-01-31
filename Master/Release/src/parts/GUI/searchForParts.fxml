@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="691.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.GUI.SearchForPartsController">
+   <children>
+      <SplitPane dividerPositions="0.75" prefHeight="691.0" prefWidth="1280.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="partTableView" layoutY="134.0" prefHeight="535.0" prefWidth="941.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="135.0">
+                    <columns>
+                      <TableColumn fx:id="nameColumn" prefWidth="291.0" text="Name" />
+                      <TableColumn fx:id="descriptionColumn" prefWidth="422.0" text="Description" />
+                        <TableColumn fx:id="costColumn" minWidth="0.0" prefWidth="82.0" text="Cost" />
+                        <TableColumn fx:id="stockLevelColumn" prefWidth="145.0" text="Stock Level" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="searchInput" layoutX="46.0" layoutY="87.0" prefHeight="25.0" prefWidth="451.0" promptText="Input Part Name..." AnchorPane.leftAnchor="46.0" AnchorPane.topAnchor="90.0" />
+                  <Button layoutX="521.0" layoutY="87.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="99.0" text="Search" AnchorPane.topAnchor="90.0" />
+                  <Button layoutX="828.0" layoutY="90.0" mnemonicParsing="false" onAction="#showAllParts" prefHeight="25.0" prefWidth="99.0" text="Show All Stock " AnchorPane.topAnchor="90.0" />
+                  <Label layoutX="423.0" layoutY="14.0" text="Part Inventory" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="397.0" layoutY="49.0" prefWidth="200.0" AnchorPane.topAnchor="50.0" />
+                  <Button layoutX="648.0" layoutY="90.0" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="99.0" text="Clear Results" />
+                  <Label layoutX="681.0" layoutY="7.0" text="Part information from www.carparts4less.co.uk" textFill="#b5aeae" />
+                  <Label layoutX="763.0" layoutY="24.0" text="Double click in list to edit parts" textFill="#b5aeae" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Button layoutX="76.0" layoutY="231.0" mnemonicParsing="false" onAction="#addNewPartType" prefHeight="45.0" prefWidth="160.0" text="Add New Part Type" />
+                  <Button layoutX="76.0" layoutY="413.0" mnemonicParsing="false" onAction="#deleteStock" prefHeight="45.0" prefWidth="160.0" text="Remove Stock" />
+                  <Button layoutX="76.0" layoutY="115.0" mnemonicParsing="false" onAction="#goToSearchPartsUsed" prefHeight="45.0" prefWidth="160.0" text="View Installed Parts" AnchorPane.topAnchor="115.0" />
+                  <Button layoutX="76.0" layoutY="52.0" mnemonicParsing="false" onAction="#showRecent" prefHeight="45.0" prefWidth="160.0" text="View Recent Stock Changes" AnchorPane.topAnchor="50.0">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="76.0" layoutY="347.0" mnemonicParsing="false" onAction="#addNewStock" prefHeight="45.0" prefWidth="160.0" text="Add Stock" />
+                  <Label layoutX="112.0" layoutY="14.0" text="Navigation" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="56.0" layoutY="178.0" prefWidth="200.0" AnchorPane.topAnchor="178.0" />
+                  <Label layoutX="98.0" layoutY="192.0" text="New Part Type">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="56.0" layoutY="294.0" prefWidth="200.0" />
+                  <Label layoutX="116.0" layoutY="308.0" text="Edit Stock">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

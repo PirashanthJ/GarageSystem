@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="320.0" prefWidth="365.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.GUI.InstallPartNotThroughBookingController">
+   <children>
+      <Label layoutX="126.0" layoutY="14.0" text="Install Part">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="83.0" layoutY="48.0" prefWidth="200.0" />
+      <Label layoutX="23.0" layoutY="125.0" text="Part:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="partChoice" layoutX="117.0" layoutY="130.0" prefHeight="25.0" prefWidth="222.0" />
+      <Button layoutX="278.0" layoutY="270.0" mnemonicParsing="false" onAction="#install" text="Install ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="23.0" layoutY="71.0" text="Vehicle:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="registrationNumberLabel" layoutX="117.0" layoutY="71.0" text="Registration Number">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="176.0" text="Stock:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="currentStockLabel" layoutX="117.0" layoutY="176.0" text="Stock">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

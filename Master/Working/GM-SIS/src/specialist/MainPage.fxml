@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="691.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="specialist.MainPageController">
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="366.0" layoutY="-13.0" prefHeight="70.0" prefWidth="559.0" text="Specialist Repair Centre">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Button fx:id="makeBooking" layoutX="302.0" layoutY="50.0" mnemonicParsing="false" onAction="#makeBooking" prefHeight="50.0" prefWidth="677.0" text="Make/Delete Booking">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="centreDetails" layoutX="302.0" layoutY="190.0" mnemonicParsing="false" onAction="#centreDetails" prefHeight="50.0" prefWidth="677.0" text="SPC Centre Details" textFill="RED">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="checkOutstanding" layoutX="300.0" layoutY="400.0" mnemonicParsing="false" onAction="#checkOutsanding" prefHeight="50.0" prefWidth="677.0" text="Check Outstanding Repairs">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="searchRepair" layoutX="300.0" layoutY="470.0" mnemonicParsing="false" onAction="#searchRepair" prefHeight="50.0" prefWidth="677.0" text="Search for Repair by Customer/Vehicle">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="showAllVehicles" layoutX="300.0" layoutY="540.0" mnemonicParsing="false" onAction="#showAllVehicles" prefHeight="50.0" prefWidth="677.0" text="List of all Vehicles sent">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="vehicleRepairs" layoutX="302.0" layoutY="610.0" mnemonicParsing="false" onAction="#repairsVehicle" prefHeight="50.0" prefWidth="677.0" text="Repairs on a Vehicle">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="makeBooking1" layoutX="302.0" layoutY="120.0" mnemonicParsing="false" onAction="#processRepair" prefHeight="50.0" prefWidth="677.0" text="Process Repair">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="makeBooking2" layoutX="302.0" layoutY="260.0" mnemonicParsing="false" onAction="#deletePart" prefHeight="50.0" prefWidth="677.0" text="Delete Active Part Booking">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="returnedItems" layoutX="300.0" layoutY="330.0" mnemonicParsing="false" onAction="#returnedItem" prefHeight="50.0" prefWidth="677.0" text="Returned Items">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

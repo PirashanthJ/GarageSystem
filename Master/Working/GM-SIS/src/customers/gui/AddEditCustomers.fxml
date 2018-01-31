@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="375.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customers.gui.AddEditCustomersController">
+   <children>
+      <Label fx:id="title" layoutX="196.0" layoutY="19.0" text="Add Customer">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="105.0" text="First Name:" />
+      <Label layoutX="59.0" layoutY="142.0" text="Surname:" />
+      <Label layoutX="61.0" layoutY="67.0" text="Type:" />
+      <Label layoutX="58.0" layoutY="179.0" text="Address:" />
+      <Label layoutX="57.0" layoutY="216.0" text="Post Code:" />
+      <Label layoutX="58.0" layoutY="254.0" text="Phone:" />
+      <Label layoutX="57.0" layoutY="293.0" text="Email:" />
+      <TextField fx:id="fnameBox" layoutX="171.0" layoutY="100.0" prefWidth="300.0" promptText="John" />
+      <TextField fx:id="snameBox" layoutX="171.0" layoutY="137.0" prefWidth="300.0" promptText="Smith" />
+      <TextField fx:id="addBox" layoutX="171.0" layoutY="174.0" prefWidth="300.0" promptText="Flat 154, King's Road, Mile End" />
+      <TextField fx:id="pcodeBox" layoutX="171.0" layoutY="211.0" prefWidth="300.0" promptText="E18 1MB" />
+      <TextField fx:id="phoneBox" layoutX="171.0" layoutY="249.0" prefWidth="300.0" promptText="07476282304" />
+      <TextField fx:id="emailBox" layoutX="171.0" layoutY="288.0" prefWidth="300.0" promptText="J.Smith123@gmail.com" />
+      <Button fx:id="saveButton" defaultButton="true" layoutX="212.0" layoutY="330.0" mnemonicParsing="false" onAction="#saveCustomerDetails" prefHeight="27.0" prefWidth="48.0" text="Save" />
+      <Button fx:id="cancelButton" layoutX="277.0" layoutY="330.0" mnemonicParsing="false" onAction="#cancel" prefHeight="27.0" prefWidth="61.0" text="Cancel" />
+      <RadioButton fx:id="privateChoice" layoutX="172.0" layoutY="67.0" mnemonicParsing="false" text="Private">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
+      <RadioButton fx:id="businessChoice" layoutX="280.0" layoutY="67.0" mnemonicParsing="false" text="Business">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
+      <Separator layoutX="175.0" layoutY="50.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

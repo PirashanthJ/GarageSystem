@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="747.0" prefWidth="569.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.GUI.VehicleDetailsViewController">
+   <children>
+      <Label layoutX="207.0" layoutY="14.0" text="Vehicle Details">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="185.0" layoutY="48.0" prefWidth="200.0" />
+      <Label layoutX="14.0" layoutY="64.0" text="Registration: ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="99.0" text="Mileage:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="134.0" text="Date of Last Service:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="278.0" text="Make:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="236.0" text="Model:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="360.0" text="Fuel Type:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="warrantyExpLabel" layoutX="22.0" layoutY="504.0" text="Warranty Expiry Date:" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="warrantyCompLabel" layoutX="14.0" layoutY="543.0" text="Warranty Company:" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="warrantyCompAddLabel" layoutX="14.0" layoutY="578.0" text="Warranty Company Address:" AnchorPane.bottomAnchor="135.0" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="475.0" layoutY="654.0" mnemonicParsing="false" onAction="#close" text="Close">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Separator layoutX="185.0" layoutY="215.0" prefWidth="200.0" />
+      <Separator fx:id="warrantySeparator" layoutX="185.0" layoutY="445.0" prefWidth="200.0" />
+      <Label layoutX="14.0" layoutY="174.0" text="MoT Renewal Date:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="319.0" text="Engine Size:" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="401.0" text="Colour:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="registrationText" layoutX="361.0" layoutY="64.0" text="Registration" AnchorPane.leftAnchor="323.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="mileageText" layoutX="141.0" layoutY="99.0" text="Mileage" AnchorPane.leftAnchor="323.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateOfLastServiceText" layoutX="234.0" layoutY="134.0" text="Date of Last Service" AnchorPane.leftAnchor="323.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="motText" layoutX="248.0" layoutY="174.0" text="MoT Renewal Date" AnchorPane.leftAnchor="323.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="modelText" layoutX="143.0" layoutY="236.0" text="Model" AnchorPane.leftAnchor="323.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="makeText" layoutX="118.0" layoutY="278.0" text="Make" AnchorPane.leftAnchor="323.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="engineSizeText" layoutX="155.0" layoutY="319.0" text="Engine Size" AnchorPane.leftAnchor="323.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="fuelTypeText" layoutX="164.0" layoutY="360.0" text="Fuel Type" AnchorPane.leftAnchor="323.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="colourText" layoutX="147.0" layoutY="401.0" text="Colour" AnchorPane.leftAnchor="323.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="warrantyExpiryText" layoutX="323.0" layoutY="504.0" text="Warranty Expiry Date" AnchorPane.leftAnchor="323.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="warrantyCompanyText" layoutX="323.0" layoutY="543.0" text="Warranty Company" wrapText="true" AnchorPane.leftAnchor="323.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="warrantyCompanyAddressText" layoutX="322.0" layoutY="580.0" text="Warranty Company Address" wrapText="true" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="322.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="messageNoWarranty" layoutX="136.0" layoutY="517.0" text="This vehicle has no warranty" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="warrantyStatLabel" layoutX="18.0" layoutY="467.0" text="Warranty Status" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="warrantyStatusText" layoutX="324.0" layoutY="467.0" text="Warranty Status" AnchorPane.leftAnchor="323.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

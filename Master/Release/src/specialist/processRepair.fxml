@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="691.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="specialist.ProcessRepairController">
+   <children>
+      <Pane layoutX="154.0" layoutY="44.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ListView fx:id="partToRepair" layoutY="209.0" prefHeight="364.0" prefWidth="1280.0" />
+            <Label layoutX="496.0" layoutY="-2.0" text="Repair Completion" underline="true">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="spcBooking" layoutX="1.0" layoutY="120.0" prefHeight="45.0" prefWidth="223.0" />
+            <Label layoutX="1.0" layoutY="89.0" prefHeight="32.0" prefWidth="229.0" text="Choose SPC BookingID">
+               <font>
+                  <Font size="22.0" />
+               </font></Label>
+            <CheckBox fx:id="vehicle" layoutY="32.0" mnemonicParsing="false" text="Vehicle" />
+            <CheckBox fx:id="part" layoutY="6.0" mnemonicParsing="false" text="Part" />
+            <Button layoutY="573.0" mnemonicParsing="false" onAction="#repairPart" prefHeight="118.0" prefWidth="1280.0" text="Repaired" />
+            <Button layoutX="230.0" layoutY="119.0" mnemonicParsing="false" onAction="#showParts" prefHeight="45.0" prefWidth="136.0" text="Enter" />
+            <Label layoutX="1.0" layoutY="162.0" prefHeight="51.0" prefWidth="330.0" text="Parts to be repaired" underline="true">
+               <font>
+                  <Font size="22.0" />
+               </font></Label>
+            <Button layoutX="1129.0" layoutY="1.0" mnemonicParsing="false" onAction="#mainPage" prefHeight="45.0" prefWidth="152.0" text="Main Menu" />
+            <Button fx:id="checkOutstanding112" layoutX="230.0" layoutY="165.0" mnemonicParsing="false" onAction="#showPartDetails" prefHeight="45.0" prefWidth="136.0" text="View part details" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

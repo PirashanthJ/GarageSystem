@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="testBtn" prefHeight="553.0" prefWidth="819.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diagrep.gui.ViewBookingBillController">
+   <children>
+      <Label layoutX="302.0" layoutY="16.0" text="Booking Cost Breakdown">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="partTable" layoutX="40.0" layoutY="119.0" prefHeight="308.0" prefWidth="741.0">
+        <columns>
+          <TableColumn fx:id="partName" prefWidth="154.41171264648438" text="Part Name" />
+            <TableColumn fx:id="partCost" prefWidth="104.58827209472656" text="Cost" />
+            <TableColumn fx:id="partWarrantyEndDate" prefWidth="127.84176635742188" resizable="false" text="Warranty End Date" />
+          <TableColumn fx:id="partInWarranty" prefWidth="93.17645263671875" resizable="false" text="In Warranty?" />
+            <TableColumn fx:id="costDeductions" prefWidth="257.04998779296875" text="Deductions" />
+        </columns>
+      </TableView>
+      <Separator layoutX="67.0" layoutY="42.0" prefHeight="14.0" prefWidth="668.0" />
+      <Label layoutX="40.0" layoutY="448.0" text="Hourly Labour Cost:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="hourlyLabourCost" layoutX="218.0" layoutY="448.0" text="£..." textFill="RED">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="hoursWorked" layoutX="218.0" layoutY="478.0" text="0" textFill="RED">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="478.0" text="Hours Worked:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="netLabourCost" layoutX="218.0" layoutY="508.0" text="£..." textFill="#00cd2c">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="508.0" text="Net Cost of Labour:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="totalCost" alignment="CENTER" editable="false" layoutX="302.0" layoutY="73.0" prefHeight="27.0" prefWidth="222.0" text="Current Cost: £..." />
+      <Button layoutX="709.0" layoutY="451.0" mnemonicParsing="false" onAction="#close" prefHeight="75.0" prefWidth="71.0" text="Close" />
+      <TextArea editable="false" layoutX="407.0" layoutY="451.0" prefHeight="75.0" prefWidth="296.0" text="New parts are only charged for if either:&#10;- part was not already installed in the vehicle&#10;- part replaced an existing part that's no longer in warranty" wrapText="true">
+         <font>
+            <Font size="12.0" />
+         </font></TextArea>
+   </children>
+</AnchorPane>

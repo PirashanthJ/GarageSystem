@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="691.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.GUI.AdvancedSearchForUsedPartsController">
+   <children>
+      <SplitPane dividerPositions="0.75" layoutX="242.0" layoutY="104.0" prefHeight="691.0" prefWidth="1280.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TextField fx:id="searchText" layoutX="58.0" layoutY="92.0" prefHeight="25.0" prefWidth="357.0" promptText="Vehicle Registration Number.." AnchorPane.leftAnchor="46.0" AnchorPane.topAnchor="90.0" />
+                  <TableView fx:id="partTableView" layoutX="55.0" layoutY="145.0" prefHeight="689.0" prefWidth="956.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="135.0">
+                    <columns>
+                      <TableColumn fx:id="partNameColumn" prefWidth="279.0" text="Part Name" />
+                      <TableColumn fx:id="vehicleRegistrationColumn" prefWidth="238.0" text="Vehicle Registration" />
+                        <TableColumn fx:id="customerNameColumn" prefWidth="438.0" text="Customer Name" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="searchButton" layoutX="421.0" layoutY="90.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="99.0" text="Search" AnchorPane.topAnchor="90.0" />
+                  <ChoiceBox fx:id="searchByChoice" layoutX="528.0" layoutY="90.0" prefWidth="150.0" AnchorPane.topAnchor="90.0" />
+                  <TextField fx:id="lastNameText" layoutX="236.0" layoutY="90.0" prefHeight="25.0" prefWidth="170.0" promptText="Last Name..." visible="false" />
+                  <Label layoutX="357.0" layoutY="14.0" text="Search For Installed Parts" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="397.0" layoutY="48.0" prefWidth="200.0" AnchorPane.topAnchor="50.0" />
+                  <TextField fx:id="firstNameText" layoutX="58.0" layoutY="90.0" prefHeight="25.0" prefWidth="170.0" promptText="First Name..." visible="false" AnchorPane.leftAnchor="46.0" />
+                  <Button layoutX="822.0" layoutY="90.0" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="99.0" text="Clear Results" />
+                  <Label layoutX="766.0" layoutY="6.0" text="Double click in list to view details" textFill="#b5aeae" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Button layoutX="77.0" layoutY="240.0" mnemonicParsing="false" onAction="#showPartsForVehicle" prefHeight="45.0" prefWidth="160.0" text="View Parts in Vehicle" AnchorPane.topAnchor="115.0" />
+                  <Button layoutX="77.0" layoutY="52.0" mnemonicParsing="false" onAction="#goHome" prefHeight="45.0" prefWidth="160.0" text="Part Inventory Home" AnchorPane.topAnchor="50.0" />
+                  <Label layoutX="113.0" layoutY="14.0" text="Navigation" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="56.0" layoutY="186.0" prefWidth="200.0" AnchorPane.topAnchor="178.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

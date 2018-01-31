@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="691.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="specialist.OutstandingController">
+   <children>
+      <Pane fx:id="pane" layoutX="33.0" layoutY="54.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ListView fx:id="showOutstanding" layoutY="174.0" prefHeight="517.0" prefWidth="1280.0" />
+            <Button fx:id="checkOutstanding" layoutX="1.0" layoutY="121.0" mnemonicParsing="false" onAction="#checkOutstanding" prefHeight="53.0" prefWidth="212.0" text="Show all outstanding parts" />
+            <Label layoutX="476.0" prefHeight="51.0" prefWidth="328.0" text="Outstanding Repairs" underline="true">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Button fx:id="checkOutstanding1" layoutX="1.0" layoutY="62.0" mnemonicParsing="false" onAction="#checkCentre" prefHeight="53.0" prefWidth="212.0" text="Select SPC" />
+            <ChoiceBox fx:id="chooseSPC" layoutX="213.0" layoutY="62.0" prefHeight="53.0" prefWidth="212.0" />
+            <Button fx:id="showDetails" layoutX="213.0" layoutY="121.0" mnemonicParsing="false" onAction="#showPartDetails" prefHeight="53.0" prefWidth="212.0" text="View part details" />
+            <Button fx:id="checkOutstanding11" layoutX="1068.0" layoutY="-1.0" mnemonicParsing="false" onAction="#mainPage" prefHeight="53.0" prefWidth="212.0" text="Main Menu" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

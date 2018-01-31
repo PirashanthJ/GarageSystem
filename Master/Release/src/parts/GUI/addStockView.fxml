@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="332.0" prefWidth="410.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.GUI.AddStockViewController">
+   <children>
+      <Label fx:id="addTitle" layoutX="151.0" layoutY="14.0" text="Add Stock" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="106.0" layoutY="48.0" prefWidth="200.0" />
+      <ChoiceBox fx:id="partChoice" layoutX="235.0" layoutY="90.0" prefHeight="25.0" prefWidth="160.0" />
+      <Label layoutX="15.0" layoutY="85.0" text="Part:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="145.0" text="Current Stock:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="quantityAdd" layoutX="15.0" layoutY="211.0" text="Quantity to Add: " visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="quantityText" layoutX="235.0" layoutY="216.0" prefHeight="25.0" prefWidth="160.0" />
+      <Button fx:id="addStock" layoutX="324.0" layoutY="276.0" mnemonicParsing="false" onAction="#addStock" text="Add Stock" visible="false" />
+      <Button fx:id="removeStock" layoutX="295.0" layoutY="289.0" mnemonicParsing="false" onAction="#removeStock" text="Remove Stock" />
+      <Label fx:id="quantityRemove" layoutX="14.0" layoutY="211.0" text="Quantity to Remove:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="removeTitle" layoutX="131.0" layoutY="14.0" text="Remove Stock">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="currentStockText" layoutX="235.0" layoutY="145.0" text="Stock">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="quantityHelpText" layoutX="163.0" layoutY="194.0" text="Only enter digits" textFill="RED" visible="false" />
+   </children>
+</AnchorPane>

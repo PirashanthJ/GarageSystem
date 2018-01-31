@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="691.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.GUI.PartsForBookingViewController">
+   <children>
+      <SplitPane dividerPositions="0.75" layoutX="56.0" layoutY="26.0" prefHeight="691.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <SplitPane dividerPositions="0.4" layoutX="198.0" layoutY="122.0" orientation="VERTICAL" prefHeight="689.0" prefWidth="956.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TableView fx:id="partInBookingTable" editable="true" layoutX="42.0" layoutY="50.0" prefHeight="272.0" prefWidth="954.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                                <columns>
+                                  <TableColumn fx:id="inBookingPartNameColumn" prefWidth="170.0" text="Part Name" />
+                                  <TableColumn fx:id="inBookingInstalledColumn" editable="false" minWidth="0.0" prefWidth="156.8" text="Installed" />
+                                    <TableColumn fx:id="repairColumn" editable="false" prefWidth="156.8" text="Repair" />
+                                    <TableColumn fx:id="inBookingAddNewColumn" editable="false" prefWidth="156.8" text="Ordered" />
+                                    <TableColumn fx:id="SPCColumn" editable="false" prefWidth="156.8" text="SPC" />
+                                    <TableColumn fx:id="deleteColumn" prefWidth="156.8" text="Delete" />
+                                </columns>
+                              </TableView>
+                              <Label layoutX="387.0" text="Parts for Booking">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutX="377.0" layoutY="34.0" prefWidth="200.0" />
+                              <Label layoutX="776.0" layoutY="6.0" text="Double click in list to view details" textFill="#b5aeae" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TableView fx:id="partToAddToBookingTable" editable="true" layoutY="58.0" prefHeight="351.0" prefWidth="954.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="58.0">
+                                <columns>
+                                  <TableColumn fx:id="partNameColumn" prefWidth="170.0" text="Part Name" />
+                                  <TableColumn fx:id="descriptionColumn" prefWidth="380.0" text="Description" />
+                                    <TableColumn fx:id="costColumn" minWidth="2.0" prefWidth="134.67" text="Cost" />
+                                    <TableColumn fx:id="installedColumn" editable="false" minWidth="134.67" prefWidth="64.0" text="Installed" />
+                                    <TableColumn fx:id="addNewColumn" minWidth="134.67" prefWidth="87.0" text="Order New" />
+                                </columns>
+                              </TableView>
+                              <Label layoutX="364.0" layoutY="9.0" text="Add Parts to Booking">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="searchText" layoutX="34.0" layoutY="14.0" prefHeight="25.0" prefWidth="160.0" />
+                              <Button layoutX="211.0" layoutY="14.0" mnemonicParsing="false" onAction="#search" text="Search" />
+                              <Button layoutX="848.0" layoutY="14.0" mnemonicParsing="false" onAction="#showAllPossibleParts" text="Show All Parts" />
+                              <Separator layoutX="377.0" layoutY="43.0" prefWidth="200.0" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="33.0" layoutY="228.0" text="Booking ID:" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="228.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="80.0" layoutY="352.0" mnemonicParsing="false" onAction="#updateBooking" prefHeight="50.0" prefWidth="160.0" text="Update Booking" AnchorPane.leftAnchor="80.0" />
+                  <Label layoutX="34.0" layoutY="269.0" text="Fault:" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="239.0" AnchorPane.topAnchor="269.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="75.0" layoutY="41.0" mnemonicParsing="false" onAction="#partHome" prefHeight="50.0" prefWidth="160.0" text="Part Inventory Home" AnchorPane.leftAnchor="79.0" AnchorPane.topAnchor="41.0" />
+                  <Button layoutX="75.0" layoutY="109.0" mnemonicParsing="false" onAction="#viewBooking" prefHeight="50.0" prefWidth="160.0" text="View Booking" AnchorPane.leftAnchor="79.0" />
+                  <Separator layoutX="58.0" layoutY="175.0" prefWidth="200.0" />
+                  <Label layoutX="116.0" layoutY="8.0" text="Navigation" AnchorPane.leftAnchor="116.0" AnchorPane.topAnchor="8.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="144.0" layoutY="550.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="36.0" layoutY="309.0" text="Cost:" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="309.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="costText" layoutX="160.0" layoutY="309.0" text="0.00">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="145.0" layoutY="309.0" text="£" AnchorPane.leftAnchor="150.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="faultText" layoutX="81.0" layoutY="269.0" text="Fault" wrapText="true" AnchorPane.leftAnchor="81.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="bookingIDText" layoutX="150.0" layoutY="228.0" text="ID" AnchorPane.leftAnchor="150.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="77.0" layoutY="188.0" text="Booking Information">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="common.gui.AdminPageController">
+   <children>
+      <Text layoutX="565.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Page">
+         <font>
+            <Font size="28.0" />
+         </font></Text>
+      <Button layoutX="1059.0" layoutY="210.0" mnemonicParsing="false" onAction="#addUser" prefHeight="44.0" prefWidth="125.0" text="Add user">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Separator layoutX="206.0" layoutY="60.0" prefHeight="24.0" prefWidth="880.0" />
+      <TableView fx:id="systemUserTable" layoutX="113.0" layoutY="168.0" prefHeight="354.0" prefWidth="892.0">
+        <columns>
+          <TableColumn fx:id="userFirstName" prefWidth="162.59648895263672" text="First Name" />
+          <TableColumn fx:id="userLastName" prefWidth="166.22039794921875" text="Last Name" />
+            <TableColumn fx:id="userLoginID" prefWidth="129.0" text="Login" />
+            <TableColumn fx:id="userHourlyWage" prefWidth="154.0" text="Hourly Wage (£)" />
+            <TableColumn fx:id="userType" prefWidth="183.0" text="User Type" />
+            <TableColumn fx:id="isUserMechanic" prefWidth="95.0" text="Mechanic?" />
+        </columns>
+      </TableView>
+      <TextField fx:id="searchByUserLogin" layoutX="258.0" layoutY="125.0" prefHeight="27.0" prefWidth="264.0" promptText="5-digit ID" visible="false" />
+      <ChoiceBox fx:id="searchBy" layoutX="113.0" layoutY="125.0" prefHeight="27.0" prefWidth="134.0" />
+      <TextField fx:id="searchByFirstName" layoutX="258.0" layoutY="126.0" prefHeight="27.0" prefWidth="129.0" promptText="First Name" />
+      <TextField fx:id="searchByLastName" layoutX="394.0" layoutY="126.0" prefHeight="27.0" prefWidth="129.0" promptText="Last Name" />
+      <Button layoutX="530.0" layoutY="126.0" mnemonicParsing="false" onAction="#searchByNameOrID" text="Search" />
+      <Button layoutX="723.0" layoutY="125.0" mnemonicParsing="false" onAction="#showActiveUsers" text="Show Active Users" />
+    <Button layoutX="864.0" layoutY="125.0" mnemonicParsing="false" onAction="#showAllMechanics" text="Show All Mechanics" />
+      <Button layoutX="1060.0" layoutY="288.0" mnemonicParsing="false" onAction="#editUser" prefHeight="44.0" prefWidth="125.0" text="Edit User">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="1059.0" layoutY="363.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="44.0" prefWidth="125.0" text="Delete User">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

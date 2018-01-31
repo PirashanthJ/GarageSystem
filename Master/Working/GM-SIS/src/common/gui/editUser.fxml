@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="432.0" prefWidth="354.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="common.gui.EditUserController">
+   <children>
+      <Label layoutX="135.0" layoutY="14.0" text="Edit User">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="82.0" layoutY="48.0" prefWidth="200.0" />
+      <Label layoutX="27.0" layoutY="80.0" text="First Name:" AnchorPane.leftAnchor="24.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstName" layoutX="162.0" layoutY="81.0" AnchorPane.leftAnchor="182.0" />
+      <TextField fx:id="surname" layoutX="162.0" layoutY="122.0" AnchorPane.leftAnchor="182.0" />
+      <Label layoutX="27.0" layoutY="164.0" text="Login:" AnchorPane.leftAnchor="24.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="206.0" text="Password:" AnchorPane.leftAnchor="24.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="253.0" text="Admin:" AnchorPane.leftAnchor="24.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="login" layoutX="162.0" layoutY="165.0" AnchorPane.leftAnchor="182.0" />
+      <CheckBox fx:id="admin" layoutX="162.0" layoutY="253.0" mnemonicParsing="false" AnchorPane.leftAnchor="182.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="mechanic" layoutX="162.0" layoutY="297.0" mnemonicParsing="false" AnchorPane.leftAnchor="182.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <Button layoutX="251.0" layoutY="383.0" mnemonicParsing="false" onAction="#updateUser" prefHeight="35.0" prefWidth="80.0" text="Update" AnchorPane.topAnchor="383.0" />
+      <Label layoutX="25.0" layoutY="297.0" text="Mechanic:" AnchorPane.leftAnchor="24.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="121.0" text="Surname:" AnchorPane.leftAnchor="24.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="wageTitle" layoutX="25.0" layoutY="344.0" text="Hourly Wage:" visible="false" AnchorPane.leftAnchor="24.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="wageText" layoutX="182.0" layoutY="345.0" visible="false" AnchorPane.leftAnchor="182.0" />
+      <Label fx:id="wageHelpText" layoutX="35.0" layoutY="324.0" text="Only enter digits followed by (.) and up to 2 more digits" textFill="RED" visible="false" />
+      <TextField fx:id="password" layoutX="182.0" layoutY="207.0" />
+      <Label fx:id="loginHelpText" layoutX="202.0" layoutY="148.0" text="Only enter 5 digits" textFill="RED" visible="false" />
+   </children>
+</AnchorPane>

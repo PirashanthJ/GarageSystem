@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="483.0" prefWidth="428.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.GUI.EditPartTypeViewController">
+   <children>
+      <Label layoutX="144.0" layoutY="14.0" text="Edit Part Type">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="117.0" layoutY="49.0" prefWidth="200.0" />
+      <Label layoutX="20.0" layoutY="92.0" text="Name:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="144.0" text="Cost:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="202.0" text="Desciption:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameText" layoutX="143.0" layoutY="97.0" prefHeight="25.0" prefWidth="250.0" />
+      <TextField fx:id="costText" layoutX="144.0" layoutY="149.0" prefHeight="25.0" prefWidth="250.0" />
+      <TextArea fx:id="descriptionText" layoutX="144.0" layoutY="202.0" prefHeight="189.0" prefWidth="250.0" wrapText="true" />
+      <Button fx:id="updateConfirmButton" layoutX="285.0" layoutY="419.0" mnemonicParsing="false" onAction="#updatePart" text="Update Part Type" />
+      <Label fx:id="costHelpText" layoutX="101.0" layoutY="127.0" text="Only enter digits followed by (.) and up to 2 more digits" textFill="RED" visible="false" />
+   </children>
+</AnchorPane>

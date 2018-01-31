@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="testBtn" prefHeight="584.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diagrep.gui.ViewVehicleController">
+   <children>
+      <Label layoutX="203.0" layoutY="14.0" text="Vehicle Record" underline="true">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="70.0" text="Mileage:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="110.0" text="Last Service:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="189.0" text="Warranty:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="298.0" text="Make/Model:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="338.0" text="Engine Size:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="378.0" text="Fuel Type:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="mileage" layoutX="210.0" layoutY="74.0" prefHeight="22.0" prefWidth="351.0" text="Unknown">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lastService" layoutX="210.0" layoutY="113.0" prefHeight="22.0" prefWidth="346.0" text="Unknown" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="warrantyInfo" alignment="TOP_LEFT" layoutX="210.0" layoutY="193.0" prefHeight="106.0" prefWidth="346.0" text="Unknown" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="makeModel" layoutX="210.0" layoutY="300.0" prefHeight="22.0" prefWidth="346.0" text="Unknown" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="engineSize" layoutX="210.0" layoutY="341.0" prefHeight="22.0" prefWidth="346.0" text="Unknown" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="fuelType" layoutX="210.0" layoutY="381.0" prefHeight="22.0" prefWidth="346.0" text="Unknown" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="vehReg" layoutX="210.0" layoutY="152.0" prefHeight="22.0" prefWidth="346.0" text="Unknown" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="149.0" text="Registration:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="417.0" text="Colour:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="453.0" text="Vehicle Kind:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="491.0" text="MOT Renewal:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="colour" layoutX="210.0" layoutY="420.0" prefHeight="22.0" prefWidth="346.0" text="Unknown" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="kind" layoutX="215.0" layoutY="456.0" prefHeight="22.0" prefWidth="346.0" text="Unknown" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="motrenewal" layoutX="215.0" layoutY="494.0" prefHeight="22.0" prefWidth="346.0" text="Unknown" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="closeButton" layoutX="495.0" layoutY="525.0" mnemonicParsing="false" onAction="#close" text="Close">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

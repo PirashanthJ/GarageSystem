@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="404.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.GUI.PartUsedDetailsController">
+   <children>
+      <Label layoutX="145.0" layoutY="14.0" text="Part Used Details">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="136.0" layoutY="48.0" prefWidth="200.0" />
+      <Label layoutX="31.0" layoutY="70.0" text="Name: ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="117.0" text="Vehicle Registration:  ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="165.0" text="Customer: ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="211.0" text="Install Date: ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="258.0" text="Warranty Expiry Date: ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="367.0" layoutY="338.0" mnemonicParsing="false" onAction="#close" text="Close">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="partNameText" layoutX="268.0" layoutY="70.0" text="Name">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="vehicleRegText" layoutX="268.0" layoutY="117.0" text="Registration">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="customerNameText" layoutX="265.0" layoutY="165.0" text="Customer Name">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="installDateText" layoutX="267.0" layoutY="211.0" text="Install Date">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="warEndDateText" layoutX="268.0" layoutY="258.0" text="Wrnty End Date">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

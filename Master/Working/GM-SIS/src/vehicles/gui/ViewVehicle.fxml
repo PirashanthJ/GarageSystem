@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-1280" maxWidth="-691" minHeight="-Infinity" minWidth="-Infinity" prefHeight="691.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vehicles.gui.ViewVehicleController">
+    <Text fill="#1b1640" fontSmoothingType="LCD" layoutX="180.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle View" wrappingWidth="366.4761657714844">
+        <font>
+          <Font name="Menlo Regular" size="48.0" />
+        </font>
+    </Text>
+    <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="44.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@finlogo.png" />
+    </ImageView>
+    <VBox alignment="CENTER" layoutX="40.0" layoutY="145.0" prefHeight="501.0" prefWidth="1101.0" spacing="10.0">
+        <HBox alignment="CENTER_LEFT" blendMode="SRC_ATOP" prefHeight="34.0" prefWidth="1113.0" spacing="15.0">
+            <TextField fx:id="searchBox" blendMode="DARKEN" focusTraversable="false" prefHeight="27.0" prefWidth="499.0" promptText="Search by Make or by full or partial Registration Number" />
+            <Button fx:id="search" defaultButton="true" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="121.0" text="Search" />
+            <RadioButton fx:id="car" focusTraversable="false" mnemonicParsing="false" text="Car" textFill="#10103c" />
+            <RadioButton fx:id="van" focusTraversable="false" mnemonicParsing="false" text="Van" textFill="#10103c" />
+            <RadioButton fx:id="truck" focusTraversable="false" mnemonicParsing="false" text="Truck" textFill="#10103c" />
+            <RadioButton fx:id="all" focusTraversable="false" mnemonicParsing="false" text="All" textFill="#10103c" />
+         <RadioButton fx:id="hidden" mnemonicParsing="false" text="Hidden" visible="false" />
+        </HBox>
+        <TableView fx:id="vehicles" cache="true" focusTraversable="false" maxHeight="449.0" maxWidth="1113.0" prefHeight="449.0" prefWidth="1113.0" style="-fx-background-color: linear-gradient(#ECEFF1, #B0BEC5); -fx-background-radius: 5;">
+            <columns>
+                <TableColumn fx:id="make" maxWidth="128.0" minWidth="-1.0" prefWidth="125.0" resizable="false" text="Make" />
+                <TableColumn fx:id="model" maxWidth="139.0" minWidth="-1.0" prefWidth="101.0" resizable="false" text="Model" />
+                <TableColumn fx:id="reg" maxWidth="174.00003051757812" minWidth="-1.0" prefWidth="117.0" resizable="false" text="Registration" />
+                <TableColumn fx:id="colour" maxWidth="201.99996948242188" minWidth="-1.0" prefWidth="85.99996948242188" resizable="false" text="Colour" />
+                <TableColumn fx:id="engine" maxWidth="213.0" minWidth="-1.0" prefWidth="78.0" resizable="false" text="Engine Size" />
+                <TableColumn fx:id="fuel" maxWidth="306.0" minWidth="-1.0" prefWidth="92.0" resizable="false" text="Fuel Type" />
+                <TableColumn fx:id="type" maxWidth="365.0" minWidth="-1.0" prefWidth="52.0" resizable="false" text="Type" />
+                <TableColumn fx:id="mot" maxWidth="475.0" minWidth="-1.0" prefWidth="109.0" resizable="false" text="MoT Renewal" />
+                <TableColumn fx:id="customerName" maxWidth="544.0" minWidth="-1.0" prefWidth="183.3013916015625" resizable="false" text="Customer Info" />
+                <TableColumn fx:id="lastBooking" maxWidth="167.0" minWidth="-1.0" prefWidth="139.3404541015625" resizable="false" text="Last Service" />
+            </columns>
+        </TableView>
+    </VBox>
+    <VBox alignment="CENTER" layoutX="1161.0" layoutY="194.0" prefHeight="443.0" prefWidth="100.0" spacing="30.0">
+        <Button fx:id="addVehicle" contentDisplay="CENTER" focusTraversable="false" mnemonicParsing="false" onAction="#addVehicle" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: linear-gradient(#B0BEC5, #607D8B); -fx-background-radius: 45; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 2 );" text="Add" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+        <Button fx:id="editVehicle" blendMode="DARKEN" focusTraversable="false" mnemonicParsing="false" onAction="#editVehicle" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: linear-gradient(#B0BEC5, #607D8B); -fx-background-radius: 45; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 2 );" text=" Edit ">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+        <Button fx:id="deleteVehicle" blendMode="DARKEN" focusTraversable="false" mnemonicParsing="false" onAction="#deleteFunction" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: linear-gradient(#B0BEC5, #607D8B); -fx-background-radius: 45; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 2 );" text="Delete">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+    </VBox>
+   <Label layoutX="457.0" layoutY="654.0" text="Double-Click on Vehicles to get Information" />
+</AnchorPane>

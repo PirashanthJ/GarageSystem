@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="691.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.GUI.ShowPartsInVehicleController">
+   <children>
+      <SplitPane dividerPositions="0.75" layoutX="282.0" layoutY="105.0" prefHeight="691.0" prefWidth="1280.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="partTable" layoutX="35.0" layoutY="135.0" prefHeight="689.0" prefWidth="956.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="135.0">
+                    <columns>
+                      <TableColumn fx:id="partNameColumn" prefWidth="366.0" text="Part Name" />
+                        <TableColumn fx:id="installDateColumn" prefWidth="309.0" text="Date Installed" />
+                        <TableColumn fx:id="warrantyEndDateColumn" prefWidth="280.0" text="Warranty End Date" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="378.0" layoutY="14.0" text="Parts Installed in Vehicle" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="vehicleRegistrationText" layoutX="398.0" layoutY="56.0" prefHeight="25.0" prefWidth="160.0" promptText="Exact Vehicle Registration " />
+                  <Button fx:id="showButton" layoutX="573.0" layoutY="56.0" mnemonicParsing="false" onAction="#initializeView" text="Show" />
+                  <Label layoutX="770.0" layoutY="6.0" text="Double click in list to edit parts" textFill="#b5aeae" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="uninstallButton" disable="true" layoutX="78.0" layoutY="239.0" mnemonicParsing="false" onAction="#uninstallPart" prefHeight="45.0" prefWidth="160.0" text="Uninstall Part" AnchorPane.topAnchor="231.0" />
+                  <Button fx:id="installButton" disable="true" layoutX="78.0" layoutY="303.0" mnemonicParsing="false" onAction="#addPartToVehicle" prefHeight="45.0" prefWidth="160.0" text="Install New Part" AnchorPane.topAnchor="296.0" />
+                  <Button layoutX="77.0" layoutY="54.0" mnemonicParsing="false" onAction="#goHome" prefHeight="45.0" prefWidth="160.0" text="Part Inventory Home" AnchorPane.topAnchor="50.0" />
+                  <Separator layoutX="56.0" layoutY="182.0" prefWidth="200.0" AnchorPane.topAnchor="178.0" />
+                  <Button fx:id="vehicleButton" disable="true" layoutX="77.0" layoutY="589.0" mnemonicParsing="false" onAction="#showVehicleDetails" prefHeight="45.0" prefWidth="160.0" text="Vehicle Details" />
+                  <Button fx:id="customerButton" disable="true" layoutX="78.0" layoutY="523.0" mnemonicParsing="false" onAction="#showCustomerDetails" prefHeight="45.0" prefWidth="160.0" text="Customer Details" />
+                  <Separator layoutX="56.0" layoutY="366.0" prefWidth="200.0" AnchorPane.topAnchor="359.0" />
+                  <Button layoutX="77.0" layoutY="117.0" mnemonicParsing="false" onAction="#goToSearchForUsedParts" prefHeight="45.0" prefWidth="160.0" text="Search Installed Parts" AnchorPane.topAnchor="115.0" />
+                  <Button fx:id="viewBookingsButton" disable="true" layoutX="78.0" layoutY="409.0" mnemonicParsing="false" onAction="#viewBookings" prefHeight="45.0" prefWidth="160.0" text="View Bookings for Vehicle" />
+                  <Separator layoutX="57.0" layoutY="468.0" prefWidth="200.0" />
+                  <Label layoutX="112.0" layoutY="14.0" text="Navigation" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="90.0" layoutY="191.0" text="Installation Editing " AnchorPane.topAnchor="191.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="119.0" layoutY="379.0" text="Bookings" AnchorPane.topAnchor="373.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="107.0" layoutY="485.0" text="View Details">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

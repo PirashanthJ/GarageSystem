@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="691.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customers.gui.ViewCustomersController">
+   <children>
+      <AnchorPane fx:id="billsPane" layoutX="314.0" layoutY="337.0" prefHeight="691.0" prefWidth="1280.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="tableViewBills" layoutX="95.0" layoutY="435.0" prefHeight="202.0" prefWidth="951.0">
+                <placeholder>
+                  <Label fx:id="billsText" text="No bills found" />
+                </placeholder>
+               <columns>
+                  <TableColumn fx:id="columnBillReg" prefWidth="141.8358917236328" text="Vehicle Reg" />
+                  <TableColumn fx:id="columnBillStartDate" minWidth="3.7083892822265625" prefWidth="157.6588592529297" text="Booking Start Date" />
+                  <TableColumn fx:id="columnBillEndDate" minWidth="0.0" prefWidth="170.3802490234375" text="Booking End Date" />
+                  <TableColumn fx:id="columnWarranty" prefWidth="140.0" text="Warranty" />
+                  <TableColumn fx:id="columnBill" minWidth="0.0" prefWidth="126.0" text="Bill" />
+                  <TableColumn fx:id="columnStatus" minWidth="0.0" prefWidth="213.0" text="Status" />
+               </columns>
+            </TableView>
+            <Label layoutX="97.0" layoutY="410.0" text="Customer Bills" />
+            <Button fx:id="setPaidButton" layoutX="1072.0" layoutY="517.0" mnemonicParsing="false" onAction="#setPaid" prefHeight="50.0" prefWidth="123.0" text="Set as Paid" />
+            <Button layoutX="1072.0" layoutY="587.0" mnemonicParsing="false" onAction="#setOutstanding" prefHeight="50.0" prefWidth="123.0" text="Set as &#10;Outstanding" textAlignment="CENTER" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="defaultPane" prefHeight="691.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="viewVehicleButton" layoutX="1072.0" layoutY="552.0" mnemonicParsing="false" onAction="#viewVehicleRecord" prefHeight="50.0" prefWidth="123.0" text="View Vehicle &#10;Info" textAlignment="CENTER" />
+            <Button fx:id="newBookingButton" layoutX="1072.0" layoutY="493.0" mnemonicParsing="false" onAction="#makeBooking" prefHeight="50.0" prefWidth="123.0" text="Make New&#10;Booking" textAlignment="CENTER" />
+            <Label layoutX="96.0" layoutY="409.0" text="Booking Dates:" />
+            <Label layoutX="603.0" layoutY="409.0" text="Vehicles Owned by Customer" />
+            <Label layoutX="949.0" layoutY="409.0" text="Parts Used" />
+            <TableView fx:id="tableViewBookings" layoutX="96.0" layoutY="435.0" prefHeight="202.0" prefWidth="362.0">
+               <placeholder>
+                  <Label fx:id="bookingsText" text="No bookings found" />
+                </placeholder>
+                <columns>
+                  <TableColumn fx:id="columnBookingRegNo" prefWidth="88.0" text="Registration" />
+                  <TableColumn fx:id="columnStartDate" prefWidth="136.0" text="Start Date" />
+                  <TableColumn fx:id="columnEndDate" prefWidth="136.0" text="End Date" />
+               </columns>
+            </TableView>
+            <TableView fx:id="tableViewVehicles" layoutX="473.0" layoutY="435.0" prefHeight="202.0" prefWidth="442.0">
+                <placeholder>
+                  <Label fx:id="vehiclesText" text="No vehicles found" />
+                </placeholder>
+                <columns>
+                  <TableColumn fx:id="columnMake" prefWidth="96.61318969726562" text="Make" />
+                  <TableColumn fx:id="columnModel" prefWidth="139.0" text="Model" />
+                  <TableColumn fx:id="columnRegNo" prefWidth="106.0" text="Registration" />
+                  <TableColumn fx:id="columnVehicleType" prefWidth="98.0" text="Vehicle Type" />
+               </columns>
+            </TableView>
+            <ListView fx:id="listViewParts" layoutX="923.0" layoutY="435.0" prefHeight="202.0" prefWidth="123.0" />
+            <Button fx:id="viewPartButton" layoutX="1072.0" layoutY="610.0" mnemonicParsing="false" onAction="#viewPartRecord" prefHeight="27.0" prefWidth="123.0" text="View Part Info" />
+            <RadioButton fx:id="allRadio" layoutX="275.0" layoutY="408.0" mnemonicParsing="false" onAction="#radioButtonPressed" text="All">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+            <RadioButton fx:id="pastRadio" layoutX="328.0" layoutY="408.0" mnemonicParsing="false" onAction="#radioButtonPressed" text="Past">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+            <RadioButton fx:id="futureRadio" layoutX="392.0" layoutY="408.0" mnemonicParsing="false" onAction="#radioButtonPressed" text="Future">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+         </children>
+      </AnchorPane>
+      <Label layoutX="558.0" layoutY="80.0" text="Type to Search">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="filterChoice" layoutX="814.0" layoutY="96.0" prefWidth="150.0" />
+      <Button fx:id="addButton" layoutX="1071.0" layoutY="137.0" mnemonicParsing="false" onAction="#addCustomer" prefHeight="27.0" prefWidth="123.0" text="Add Customer" />
+      <Button fx:id="editButton" layoutX="1071.0" layoutY="181.0" mnemonicParsing="false" onAction="#editCustomer" prefHeight="27.0" prefWidth="123.0" text="Edit Customer" />
+      <Button fx:id="deleteButton" layoutX="1071.0" layoutY="225.0" mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="27.0" prefWidth="123.0" text="Delete Customer" />
+      <TableView fx:id="tableViewCustomers" editable="true" layoutX="95.0" layoutY="137.0" prefHeight="261.0" prefWidth="951.0">
+        <placeholder>
+            <Label text="No results found" />
+        </placeholder>
+         <columns>
+            <TableColumn fx:id="columnCustomerType" prefWidth="75.0" text="Type" />
+          <TableColumn fx:id="columnFirstname" prefWidth="97.0" text="First Name" />
+            <TableColumn fx:id="columnSurname" prefWidth="107.0" text="Surname" />
+          <TableColumn fx:id="columnAddress" prefWidth="296.72528076171875" text="Address" />
+            <TableColumn fx:id="columnPostCode" prefWidth="75.0" text="Post Code" />
+            <TableColumn fx:id="columnPhone" prefWidth="100.0" text="Phone" />
+            <TableColumn fx:id="columnEmail" prefWidth="184.62274169921875" text="Email" />
+        </columns>
+      </TableView>
+      <TextField fx:id="searchBox" layoutX="95.0" layoutY="96.0" onKeyReleased="#keyReleaseListener" prefHeight="27.0" prefWidth="552.0" promptText="Select and enter customer first name, surname or vehicle registration number" />
+      <Label layoutX="531.0" layoutY="27.0" prefHeight="30.0" prefWidth="289.0" text="Customer Accounts" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="searchChoice" layoutX="658.0" layoutY="96.0" prefHeight="27.0" prefWidth="145.0" />
+      <Separator layoutX="516.0" layoutY="64.0" prefHeight="1.0" prefWidth="252.0" />
+      <Button fx:id="viewAllButton" layoutX="975.0" layoutY="96.0" mnemonicParsing="false" onAction="#viewAllCustomers" prefHeight="27.0" prefWidth="71.0" text="View All">
+         <tooltip>
+            <Tooltip text="Shows All Customers" />
+         </tooltip></Button>
+      <Label layoutX="745.0" layoutY="80.0" text="Search by">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="1096.0" layoutY="408.0" prefHeight="1.0" prefWidth="76.0" text="Toggle View" />
+      <ToggleButton fx:id="defaultToggle" layoutX="1071.0" layoutY="435.0" mnemonicParsing="false" onAction="#toggleBills" prefHeight="50.0" prefWidth="63.0" text="Default" />
+      <ToggleButton fx:id="billsToggle" layoutX="1133.0" layoutY="435.0" mnemonicParsing="false" onAction="#toggleBills" prefHeight="50.0" prefWidth="63.0" text="Bills" />
+      <Separator layoutX="1131.0" layoutY="435.0" orientation="VERTICAL" prefHeight="50.0" prefWidth="1.0" />
+      <Label layoutX="918.0" layoutY="80.0" text="Filter by">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      
+   </children>
+</AnchorPane>

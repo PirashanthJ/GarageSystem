@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="288.0" prefWidth="433.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="specialist.PartDetailsController">
+   <children>
+      <Label layoutX="151.0" layoutY="8.0" text="Part Details">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="installDate" layoutX="139.0" layoutY="157.0" prefHeight="25.0" prefWidth="280.0" />
+      <TextField fx:id="name" layoutX="138.0" layoutY="111.0" prefHeight="27.0" prefWidth="161.0" />
+      <TextField fx:id="id" layoutX="138.0" layoutY="67.0" prefHeight="27.0" prefWidth="56.0" />
+      <Label layoutX="11.0" layoutY="156.0" text="Install date">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="11.0" layoutY="198.0" text="Description">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="10.0" layoutY="110.0" text="Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="64.0" text="ID">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="description" layoutX="138.0" layoutY="195.0" prefHeight="78.0" prefWidth="280.0" wrapText="true" />
+   </children>
+</AnchorPane>

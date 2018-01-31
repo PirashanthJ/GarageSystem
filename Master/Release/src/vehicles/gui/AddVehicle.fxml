@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="555.0" style="-fx-background-color: #ECEFF1;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vehicles.gui.AddVehicleController">
+    <Label fx:id="title" layoutX="150.0" layoutY="14.0" prefHeight="28.0" prefWidth="268.0" text="Add Vehicle Information" textAlignment="CENTER">
+        <font>
+            <Font size="23.0" />
+        </font>
+    </Label>
+    <Separator layoutX="175.0" layoutY="52.0" prefWidth="200.0" />
+   <HBox alignment="CENTER_RIGHT" layoutX="375.0" layoutY="564.0" prefHeight="27.0" prefWidth="133.0" spacing="10.0" />
+    <VBox alignment="CENTER_RIGHT" layoutX="42.0" layoutY="64.0" prefHeight="482.0" prefWidth="466.0" spacing="10.0">
+        <HBox alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="448.0" spacing="30.0">
+            <Label text="Choose Customer:">
+                <font>
+                    <Font size="18.0"/>
+                </font>
+            </Label>
+            <ChoiceBox fx:id="customerChoiceBox" prefWidth="150.0"/>
+        </HBox>
+        <HBox alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="448.0" spacing="30.0">
+            <Label text="Choose Vehicle from Template:">
+                <font>
+                    <Font size="18.0"/>
+                </font>
+            </Label>
+            <ChoiceBox fx:id="templateChoiceBox" prefWidth="150.0"/>
+        </HBox>
+        <HBox alignment="CENTER_RIGHT" prefHeight="219.0" prefWidth="448.0" spacing="10.0">
+            <VBox alignment="TOP_RIGHT" prefHeight="238.0" prefWidth="164.0" spacing="5.0">
+                <Label text="Model:">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <Label text="Make:">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <Label text="Registration:">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <Label text="Colour:">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <Label text="Fuel Type:">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <Label text="Engine Size:">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <Label text="Type:">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <Label text="MoT Renewal:">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+            </VBox>
+            <VBox prefHeight="227.0" prefWidth="300.0" spacing="6.0">
+                <children>
+                    <TextField fx:id="modelField" minHeight="-Infinity" prefHeight="26.0" promptText="eg. Enzo">
+                        <font>
+                            <Font size="12.0"/>
+                        </font>
+                    </TextField>
+                    <TextField fx:id="makeField" minHeight="-Infinity" prefHeight="26.0" promptText="eg. Ferrari">
+                        <font>
+                            <Font size="12.0"/>
+                        </font>
+                    </TextField>
+                    <TextField fx:id="regNumField" minHeight="-Infinity" prefHeight="26.0" promptText="eg. NA7 9BR">
+                        <font>
+                            <Font size="12.0"/>
+                        </font>
+                    </TextField>
+                    <TextField fx:id="colourField" minHeight="-Infinity" prefHeight="26.0" promptText="eg. Red">
+                        <font>
+                            <Font size="12.0"/>
+                        </font>
+                    </TextField>
+                    <TextField fx:id="fuelTypeField" minHeight="-Infinity" prefHeight="26.0"
+                               promptText="eg. Diesel">
+                        <font>
+                            <Font size="12.0"/>
+                        </font>
+                    </TextField>
+                    <TextField fx:id="engSizeField" minHeight="-Infinity" prefHeight="26.0" prefWidth="53.0"
+                               promptText="eg. 4.5 L">
+                        <font>
+                            <Font size="12.0"/>
+                        </font>
+                    </TextField>
+                    <ChoiceBox fx:id="typeChoice" prefHeight="19.0" prefWidth="296.0"/>
+                    <DatePicker fx:id="motField" prefHeight="27.0" prefWidth="305.0"/>
+                </children>
+            </VBox>
+        </HBox>
+        <HBox prefHeight="23.0" prefWidth="466.0">
+            <Label prefHeight="28.0" prefWidth="216.0"/>
+            <Separator prefHeight="26.0" prefWidth="199.0"/>
+        </HBox>
+        <HBox alignment="TOP_RIGHT" prefHeight="111.0" prefWidth="466.0" spacing="10.0">
+            <VBox alignment="TOP_RIGHT" prefHeight="74.0" prefWidth="163.0" spacing="4.0">
+                <children>
+                    <Label prefHeight="23.0" prefWidth="113.0">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                    </Label>
+                    <Label text="Company:">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                    </Label>
+                    <Label text="Address:">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                    </Label>
+                    <Label text="Expiry Date:">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                    </Label>
+                </children>
+            </VBox>
+            <VBox alignment="CENTER_RIGHT" prefHeight="133.0" prefWidth="294.0" spacing="5.0">
+                <CheckBox fx:id="inWarrantyCheck" alignment="CENTER_RIGHT" contentDisplay="RIGHT"
+                          mnemonicParsing="false" prefHeight="11.0" prefWidth="142.0" text="In Warranty">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </CheckBox>
+                <TextField fx:id="companyField" disable="true" minHeight="-Infinity" prefHeight="26.0"
+                           prefWidth="265.0" promptText="eg. Bates Insurance">
+                    <font>
+                        <Font size="12.0"/>
+                    </font>
+                </TextField>
+                <TextField fx:id="addressField" disable="true" minHeight="-Infinity" prefHeight="26.0"
+                           prefWidth="293.0" promptText="eg. 32 Park Lane, W1 1AB">
+                    <font>
+                        <Font size="12.0"/>
+                    </font>
+                </TextField>
+                <DatePicker fx:id="expiryField" disable="true" prefHeight="27.0" prefWidth="302.0"/>
+            </VBox>
+        </HBox>
+        <HBox alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="466.0" spacing="10.0">
+            <Button fx:id="save" cache="true" defaultButton="true" mnemonicParsing="false" onAction="#saveVehicle"
+                    text="Save"/>
+            <Button fx:id="cancel" mnemonicParsing="false" onAction="#cancel" text="Cancel"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

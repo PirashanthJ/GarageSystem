@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="691.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="specialist.RepairsVehicleController">
+   <children>
+      <Pane layoutX="30.0" layoutY="88.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Accordion layoutY="80.0" prefHeight="613.0" prefWidth="1280.0">
+              <panes>
+                <TitledPane fx:id="vehicle" animated="false" prefHeight="287.0" prefWidth="600.0" text="Choose Vehicle">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="266.0" prefWidth="598.0">
+                           <children>
+                              <ChoiceBox fx:id="vehicleReg" layoutX="182.0" layoutY="4.0" prefHeight="34.0" prefWidth="225.0" />
+                              <Label layoutX="6.0" layoutY="6.0" text="Vehicle Registration">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Label>
+                              <Button layoutX="407.0" layoutY="4.0" mnemonicParsing="false" onAction="#getRepairs" prefHeight="34.0" prefWidth="108.0" text="Enter" />
+                              <ListView fx:id="showRepairs" layoutY="92.0" prefHeight="445.0" prefWidth="1280.0" />
+                              <Label layoutX="6.0" layoutY="47.0" text="Repair Details" underline="true">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Label>
+                              <Button fx:id="changeRepair" layoutX="183.0" layoutY="40.0" mnemonicParsing="false" onAction="#showParts" prefHeight="44.0" prefWidth="224.0" text="Change repair part list">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane fx:id="changes" animated="false" text="Make changes">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ListView fx:id="existingParts" layoutY="117.0" prefHeight="420.0" prefWidth="640.0" />
+                              <ListView fx:id="newParts" layoutX="639.0" layoutY="117.0" prefHeight="420.0" prefWidth="640.0" />
+                              <Label layoutX="8.0" layoutY="77.0" text="PartsInBooking" underline="true">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font></Label>
+                              <Label layoutX="640.0" layoutY="77.0" text="PartsInVehicle" underline="true">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font></Label>
+                              <Button layoutX="818.0" layoutY="75.0" mnemonicParsing="false" onAction="#addPart" prefHeight="40.0" prefWidth="128.0" text="Add" />
+                              <Button layoutX="170.0" layoutY="75.0" mnemonicParsing="false" onAction="#deletePart" prefHeight="40.0" prefWidth="128.0" text="Delete" />
+                              <Button fx:id="Edit" layoutX="298.0" layoutY="75.0" mnemonicParsing="false" onAction="#editInstallDate" prefHeight="40.0" prefWidth="128.0" text="Edit Install Date" />
+                              <Button fx:id="EnterEdit" layoutX="170.0" layoutY="6.0" mnemonicParsing="false" onAction="#enterInstallDate" prefHeight="40.0" prefWidth="128.0" text="Choose and Enter" />
+                              <DatePicker fx:id="pickDate" layoutX="298.0" layoutY="6.0" prefHeight="40.0" prefWidth="128.0" />
+                              <Button fx:id="checkOutstanding112" layoutX="426.0" layoutY="75.0" mnemonicParsing="false" onAction="#showPartDetails" prefHeight="40.0" prefWidth="128.0" text="View part details" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+            <Label layoutX="401.0" text="Specialist repairs on a a vehicle">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Button fx:id="changeRepair1" layoutX="1055.0" mnemonicParsing="false" onAction="#mainPage" prefHeight="44.0" prefWidth="224.0" text="Main Menu">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="changeRepair11" mnemonicParsing="false" onAction="#showVehicleDetails" prefHeight="44.0" prefWidth="224.0" text="Vehicle details">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="381.0" prefWidth="389.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.GUI.AddPartViewController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="101.0" layoutY="-3.0" nodeOrientation="LEFT_TO_RIGHT" text="Add New Part Type">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </Label>
+      <Separator layoutX="104.0" layoutY="31.0" prefWidth="200.0">
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </Separator>
+      <TextField fx:id="nameText" layoutX="121.0" layoutY="55.0" prefHeight="25.0" prefWidth="239.0" />
+      <TextField fx:id="costText" layoutX="122.0" layoutY="102.0" prefHeight="25.0" prefWidth="239.0" />
+      <TextArea fx:id="descriptionText" layoutX="122.0" layoutY="197.0" prefHeight="131.0" prefWidth="239.0" wrapText="true" />
+      <Button fx:id="addNewPartButton" contentDisplay="RIGHT" layoutX="275.0" layoutY="342.0" mnemonicParsing="false" onAction="#addNewPartType" prefHeight="25.0" prefWidth="85.0" text="Add" />
+      <Label layoutX="22.0" layoutY="54.0" text="Name:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="101.0" text="Cost:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="costHelpText" layoutX="47.0" layoutY="81.0" text="Only enter digits followed by (.) and up to 2 more digits" textFill="RED" visible="false" />
+      <TextField fx:id="quantityText" layoutX="121.0" layoutY="149.0" prefHeight="25.0" prefWidth="239.0" />
+      <Label layoutX="20.0" layoutY="148.0" text="Quantity:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="197.0" text="Description:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="quantityHelpText" layoutX="151.0" layoutY="128.0" text="Only enter digits" textFill="RED" visible="false" />
+   </children>
+</AnchorPane>

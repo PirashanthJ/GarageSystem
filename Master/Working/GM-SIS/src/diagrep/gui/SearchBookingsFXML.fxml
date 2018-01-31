@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="testBtn" prefHeight="691.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diagrep.gui.SearchController">
+   <children>
+      <Label layoutX="487.0" layoutY="14.0" text="Find A DiagRepair Booking!" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="bookingsList" layoutX="23.0" layoutY="148.0" onMouseClicked="#checkSelection" prefHeight="477.0" prefWidth="1090.0">
+        <columns>
+          <TableColumn fx:id="bookingID" prefWidth="46.0" text="ID" />
+            <TableColumn fx:id="vehicleReg" prefWidth="104.0" text="Vehicle Reg" />
+            <TableColumn fx:id="vehicleMan" prefWidth="152.0" text="Manufacturer" />
+            <TableColumn fx:id="customerName" prefWidth="179.0" text="Customer Name" />
+          <TableColumn fx:id="startDate" prefWidth="135.0" resizable="false" text="Start Date" />
+            <TableColumn fx:id="endDate" prefWidth="135.0" resizable="false" text="End Date" />
+            <TableColumn fx:id="nextBooking" prefWidth="135.0" resizable="false" text="Next Booking" />
+            <TableColumn fx:id="completed" prefWidth="76.0" resizable="false" text="Complete?" />
+            <TableColumn fx:id="type" prefWidth="125.0" resizable="false" text="Type" />
+        </columns>
+      </TableView>
+      <ToolBar fx:id="inputRegSearchBar" layoutX="258.0" layoutY="98.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="550.0">
+        <items>
+            <TextField fx:id="inputRegSearchTxt" prefHeight="27.0" prefWidth="292.0" promptText="Search by Vehicle Registration" />
+            <Button fx:id="inputRegSearchBtn" mnemonicParsing="false" onAction="#searchByVehicleReg" prefHeight="27.0" prefWidth="102.0" text="Search" />
+        </items>
+      </ToolBar>
+      <ToolBar layoutX="1133.0" layoutY="175.0" orientation="VERTICAL" prefHeight="312.0" prefWidth="125.0">
+         <items>
+            <Button mnemonicParsing="false" onAction="#addBooking" prefHeight="36.0" prefWidth="113.0" text="Add Booking" />
+            <Button fx:id="editBooking" disable="true" mnemonicParsing="false" onAction="#editBooking" prefHeight="36.0" prefWidth="113.0" text="Edit Booking" />
+            <Button fx:id="deleteBooking" disable="true" mnemonicParsing="false" onAction="#deleteBooking" prefHeight="36.0" prefWidth="113.0" text="Delete Booking" />
+            <Button fx:id="viewCustomerRecord" disable="true" mnemonicParsing="false" onAction="#viewCustomerRecord" prefHeight="50.0" prefWidth="113.0" text="View Customer Details" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="viewVehicleRecord" disable="true" mnemonicParsing="false" onAction="#viewVehicleRecord" prefHeight="48.0" prefWidth="113.0" text="View Vehicle Details" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="viewPastFutureBookings" disable="true" mnemonicParsing="false" onAction="#viewPastFutureBookings" prefHeight="68.0" prefWidth="113.0" text="View Past &amp; Future Bookings" textAlignment="CENTER" wrapText="true" />
+         </items>
+      </ToolBar>
+      <Separator layoutX="24.0" layoutY="75.0" prefHeight="13.0" prefWidth="1231.0" />
+      <ToolBar layoutX="23.0" layoutY="98.0" prefHeight="40.0" prefWidth="236.0">
+         <items>
+            <Label text="Search by: " />
+            <ChoiceBox fx:id="searchBy" prefHeight="27.0" prefWidth="139.0" />
+         </items>
+      </ToolBar>
+      <ToolBar layoutX="805.0" layoutY="98.0" prefHeight="40.0" prefWidth="306.0">
+        <items>
+            <Separator orientation="VERTICAL" prefHeight="28.0" prefWidth="5.0" />
+          <Button mnemonicParsing="false" onAction="#viewAllBookings" text="View All Bookings" />
+            <Button mnemonicParsing="false" onAction="#viewFutureBookings" text="View Future Bookings" />
+        </items>
+      </ToolBar>
+      <ToolBar fx:id="templateSearchBar" layoutX="258.0" layoutY="98.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="550.0" visible="false">
+         <items>
+            <ChoiceBox fx:id="templateChoiceBox" prefHeight="27.0" prefWidth="292.0" />
+            <Button fx:id="templateSearchBtn" mnemonicParsing="false" onAction="#searchByTemplate" prefHeight="27.0" prefWidth="102.0" text="Search" />
+         </items>
+      </ToolBar>
+      <ToolBar fx:id="inputNameSearchBar" layoutX="258.0" layoutY="98.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="550.0" visible="false">
+         <items>
+            <TextField fx:id="inputFirstNameSearchTxt" prefHeight="27.0" prefWidth="144.0" promptText="First Name" />
+            <TextField fx:id="inputLastNameSearchTxt" prefHeight="27.0" prefWidth="144.0" promptText="Last Name" />
+            <Button fx:id="inputNameSearchBtn" mnemonicParsing="false" onAction="#searchByCustomerName" prefHeight="27.0" prefWidth="102.0" text="Search" />
+         </items>
+      </ToolBar>
+      <ToolBar fx:id="hourDayMonthBar" layoutX="258.0" layoutY="98.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="550.0" visible="false">
+         <items>
+            <MenuButton fx:id="hourlyPicker" mnemonicParsing="false" prefHeight="27.0" prefWidth="130.0" text="Hourly">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+            </MenuButton>
+            <DatePicker fx:id="dailyPicker" prefHeight="27.0" prefWidth="130.0" promptText="Daily" />
+            <MenuButton fx:id="monthlyPicker" mnemonicParsing="false" prefHeight="27.0" prefWidth="130.0" text="Monthly">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+            </MenuButton>
+         </items>
+      </ToolBar>
+      <Label fx:id="searchByStatus" alignment="CENTER" layoutX="25.0" layoutY="53.0" prefHeight="17.0" prefWidth="1231.0" text="Please select a search method from the toolbar..." textAlignment="CENTER" textFill="BLUE" />
+   </children>
+</AnchorPane>

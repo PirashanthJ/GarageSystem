@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="691.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="specialist.BookingController">
+   <children>
+      <Pane layoutX="222.0" layoutY="46.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Accordion layoutY="80.0" prefHeight="613.0" prefWidth="1280.0">
+              <panes>
+                <TitledPane fx:id="section1" animated="false" prefHeight="267.0" prefWidth="600.0" text="Choose DiagID">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ChoiceBox fx:id="diagID" layoutX="205.0" layoutY="28.0" prefHeight="41.0" prefWidth="314.0">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="Item 1" />
+                                       <String fx:value="Item 2" />
+                                       <String fx:value="Item 3" />
+                                    </FXCollections>
+                                 </items>
+                              </ChoiceBox>
+                              <ChoiceBox fx:id="spcCentres" layoutX="205.0" layoutY="91.0" prefHeight="41.0" prefWidth="314.0">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="Item 1" />
+                                       <String fx:value="Item 2" />
+                                       <String fx:value="Item 3" />
+                                    </FXCollections>
+                                 </items>
+                              </ChoiceBox>
+                              <Label layoutX="24.0" layoutY="18.0" prefHeight="59.0" prefWidth="255.0" text="DiagRepair ID">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font></Label>
+                              <Label layoutX="24.0" layoutY="97.0" text="Choose SPC">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font></Label>
+                              <Button fx:id="enterDiag" layoutY="316.0" mnemonicParsing="false" onAction="#getVehicle" prefHeight="221.0" prefWidth="1280.0" text="Continue" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane fx:id="section2" animated="false" text="Choose Parts">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ListView fx:id="addedPart" layoutX="-3.0" layoutY="73.0" prefHeight="251.0" prefWidth="640.0" />
+                              <Button fx:id="addPart" layoutX="-2.0" layoutY="324.0" mnemonicParsing="false" onAction="#addPart" prefHeight="41.0" prefWidth="185.0" text="Add Part" />
+                              <ListView fx:id="showPart" layoutX="638.0" layoutY="73.0" prefHeight="251.0" prefWidth="640.0" />
+                              <Button fx:id="deletePart" layoutX="1093.0" layoutY="324.0" mnemonicParsing="false" onAction="#deletePart" prefHeight="41.0" prefWidth="185.0" text="Delete part" />
+                              <Label layoutX="640.0" layoutY="46.0" prefHeight="27.0" prefWidth="103.0" text="Added parts" underline="true">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="enterPart" layoutY="366.0" mnemonicParsing="false" onAction="#enterPart" prefHeight="178.0" prefWidth="1280.0" text="Continue" />
+                              <Label layoutY="46.0" prefHeight="27.0" prefWidth="123.0" text="Parts available" underline="true">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutY="14.0" prefHeight="17.0" prefWidth="103.0" text="Diagnosed Fault:" />
+                              <TextField fx:id="dFault" layoutX="90.0" layoutY="10.0" prefHeight="25.0" prefWidth="543.0" />
+                              <Button fx:id="checkOutstanding112" layoutX="183.0" layoutY="324.0" mnemonicParsing="false" onAction="#showPartDetails" prefHeight="41.0" prefWidth="185.0" text="View part details" />
+                              <TextField fx:id="vehicleReg" layoutX="749.0" layoutY="10.0" prefHeight="25.0" prefWidth="197.0" />
+                              <Label layoutX="640.0" layoutY="14.0" text="Vehicle Registration:" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane fx:id="section3" animated="false" text="Make Booking">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="307.0" layoutY="191.0" prefHeight="17.0" prefWidth="130.0" text="Expected Delivery Date" />
+                              <DatePicker fx:id="deliveryDate" layoutX="307.0" layoutY="207.0" prefHeight="25.0" prefWidth="204.0" />
+                              <Label layoutX="739.0" layoutY="191.0" prefHeight="17.0" prefWidth="130.0" text="Expected Return Date" />
+                              <DatePicker fx:id="returnDate" layoutX="739.0" layoutY="207.0" prefHeight="25.0" prefWidth="204.0" />
+                              <Button fx:id="bookingB" layoutX="301.0" layoutY="269.0" mnemonicParsing="false" onAction="#makeBooking" prefHeight="181.0" prefWidth="676.0" text="Make Booking" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane fx:id="section4" animated="false" text="Delete booking">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ListView fx:id="allBookings" layoutY="86.0" prefHeight="426.0" prefWidth="1280.0" />
+                              <Label layoutY="54.0" text="List of bookings" underline="true">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="1086.0" layoutY="40.0" mnemonicParsing="false" onAction="#deleteBooking" prefHeight="41.0" prefWidth="185.0" text="Delete booking" />
+                           </children></AnchorPane>
+                  </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+            <Label fx:id="three" layoutY="31.0" text="Finally choose the dates and click Make Booking" textFill="#eb0ebf" />
+            <Label fx:id="two" layoutY="14.0" text="Then add the single part or parts from vehicle and click continue" textFill="#081ada" />
+            <Label fx:id="one" layoutY="-19.0" prefHeight="52.0" prefWidth="358.0" text="First choose your DiagRepair ID and SPC and click continue" textFill="#eb0808" />
+            <Button layoutX="1092.0" layoutY="39.0" mnemonicParsing="false" onAction="#edit" prefHeight="41.0" prefWidth="185.0" text="Edit" />
+            <CheckBox fx:id="vehicle" layoutX="60.0" layoutY="52.0" mnemonicParsing="false" text="Vehicle" />
+            <CheckBox fx:id="part" layoutY="52.0" mnemonicParsing="false" text="Part" />
+            <CheckBox fx:id="makeBooking" layoutX="541.0" layoutY="7.0" mnemonicParsing="false" onAction="#chooseBookingMode" text="Make a booking">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="deleteBooking" layoutX="541.0" layoutY="45.0" mnemonicParsing="false" onAction="#chooseBookingMode" text="Delete a booking">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </CheckBox>
+            <Button layoutX="1092.0" mnemonicParsing="false" onAction="#mainPage" prefHeight="41.0" prefWidth="185.0" text="Main Menu" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
